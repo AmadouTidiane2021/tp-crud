@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>User</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-item> {{welcomeMessage}} Formation IONIC 6</ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  <ion-toolbar color="dark"></ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-searchbar [(ngModel)]="searchTitle"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="searchMovie()">
+        <ion-icon name="search-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-item lines="none">
+    <ion-label text-wrap>
+      <ion-text color="medium">
+        <p>Dark Vador</p>
+      </ion-text>
+    </ion-label>
+    <ion-toggle (ionChange)="onClick($event)" slot="start">Dark Mode</ion-toggle>
+  </ion-item>
+  <ion-list>
+ <!--<img src="./assets/img/girafe.jpg" />-->
+    <ion-item>
+      <ion-label>Id</ion-label>
+      <ion-input placeholder="id" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input placeholder="nom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prenom</ion-label>
+      <ion-input placeholder="prenom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input placeholder="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mot de Passe</ion-label>
+      <ion-input placeholder="placeholder" type="password"></ion-input>
+    </ion-item>
+    <section>
+      <ion-button  color="success">Enregistrer</ion-button>
+    </section>
+  </ion-list> 
+  <ion-list *ngFor="let elt of users">
+    {{ elt.nom }}   {{ elt.prenom }}
+  </ion-list>
+</ion-content>

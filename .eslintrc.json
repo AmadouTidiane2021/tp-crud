@@ -5,7 +5,7 @@
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": ["tsconfig.json", "e2e/tsconfig.json"],
+        "project": ["ionic-creator-export.json", "e2e/ionic-creator-export.json"],
         "createDefaultProgram": true
       },
       "extends": [
