@@ -23,41 +23,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-item lines="none">
-    <ion-label text-wrap>
-      <ion-text color="medium">
-        <p>Dark Vador</p>
-      </ion-text>
-    </ion-label>
-    <ion-toggle (ionChange)="onClick($event)" slot="start">Dark Mode</ion-toggle>
-  </ion-item>
-  <ion-list>
- <!--<img src="./assets/img/girafe.jpg" />-->
-    <ion-item>
-      <ion-label>Id</ion-label>
-      <ion-input placeholder="id" type="number"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Nom</ion-label>
-      <ion-input placeholder="nom"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Prenom</ion-label>
-      <ion-input placeholder="prenom"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Email</ion-label>
-      <ion-input placeholder="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Mot de Passe</ion-label>
-      <ion-input placeholder="placeholder" type="password"></ion-input>
-    </ion-item>
-    <section>
-      <ion-button  color="success">Enregistrer</ion-button>
-    </section>
-  </ion-list> 
   <ion-list *ngFor="let elt of users">
-    {{ elt.nom }}   {{ elt.prenom }}
-  </ion-list>
+    <ion-label> 
+      <p>{{ elt.id }} </p>
+      <p> {{ elt.username }}</p>
+      <p>{{ elt.email }}</p>
+    </ion-label> 
+  </ion-list> 
 </ion-content>
